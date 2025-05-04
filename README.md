@@ -271,6 +271,28 @@ Automates testing, linting, and deployment workflows using GitHub Actions and Do
 
 ---
 
+
+## 🔐 API Security
+
+Security is a core pillar of the Airbnb Clone Project, as it deals with sensitive user information, financial transactions, and personal property listings. The following security measures will be implemented to ensure the safety and integrity of the platform.
+
+### 🔑 Authentication
+**Implementation**:  
+We will use **JWT (JSON Web Tokens)** for stateless authentication. Each user receives a signed token after logging in, which must be included in API requests to access protected resources.
+
+**Why It Matters**:  
+Prevents unauthorized access to user-specific or sensitive data, such as bookings, payment history, and profile information.
+
+---
+
+### 🔓 Authorization
+**Implementation**:  
+Role-based access control will be enforced to distinguish between regular users (guests), hosts, and admins. Certain actions (like listing a property or viewing all bookings) will be restricted based on the user's role.
+
+**Why It Matters**:  
+Ensures
+
+
 ### 📝 Documentation & Planning
 Maintains clear technical documentation and architectural planning to support collaboration and maintainability. This includes API references, data models, and setup guides to streamline onboarding and future development.
 

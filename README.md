@@ -231,3 +231,47 @@ Represents payment transactions related to bookings.
 - One **Property** ↔️ Many **Reviews**  
 - One **Booking** ↔️ One **Payment**
 
+
+## ✨ Feature Breakdown
+
+This project is structured around key modules that replicate core functionalities of a booking platform like Airbnb. Each feature contributes to building a scalable, user-friendly system that reflects real-world application requirements.
+
+### 👤 User Management
+Handles user registration, authentication, and profile management. It includes secure login with JWT, role distinction between hosts and guests, and account update capabilities. This feature ensures users can interact safely and efficiently within the platform.
+
+---
+
+### 🏘️ Property Management
+Allows hosts to create, update, and manage property listings. Properties can include details such as title, description, price, location, and images. This module empowers hosts to showcase their offerings and control availability.
+
+---
+
+### 📅 Booking System
+Enables users to book properties for specified dates while handling availability conflicts and status tracking. This system manages the lifecycle of a reservation, from creation to cancellation, ensuring smooth and reliable transactions.
+
+---
+
+### 💳 Payment Integration
+Processes secure payments associated with bookings using various payment methods. It tracks payment status and ensures transactional integrity. This feature is essential for monetizing the platform and building user trust.
+
+---
+
+### ⭐ Review & Rating System
+Allows guests to leave feedback on properties after a stay. Ratings and comments contribute to a reputation system, helping other users make informed booking decisions and encouraging host accountability.
+
+---
+
+### 🔒 Security & Access Control
+Implements authentication, authorization, and secure API access using JWT and HTTPS. It protects user data and ensures that only authorized actions can be performed by each role (e.g., host, guest, admin).
+
+---
+
+### 🚀 CI/CD & Deployment
+Automates testing, linting, and deployment workflows using GitHub Actions and Docker. It ensures the platform can be continuously integrated and delivered reliably across development, staging, and production environments.
+
+---
+
+### 📝 Documentation & Planning
+Maintains clear technical documentation and architectural planning to support collaboration and maintainability. This includes API references, data models, and setup guides to streamline onboarding and future development.
+
+

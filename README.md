@@ -23,7 +23,7 @@ The **Airbnb Clone Project** is a comprehensive full-stack web application desig
 - **Authentication & Security**: JWT, HTTPS, Role-based access control
 
 
-## 👥 Project Roles and Responsibilities
+## 👥 Team Roles
 
 ### 🔧 Backend Developer
 **Responsibility**:  
@@ -134,4 +134,100 @@ This project utilizes a modern full-stack architecture to ensure scalability, pe
 ### 🖥️ Frontend (Optional/Extendable)
 
 - **React** *(suggested)*: While not covered in the initial scope, React can be used to build the frontend interface that interacts with the GraphQL API.
+
+
+## 🗄️ Database Design
+
+The Airbnb Clone Project requires a well-structured relational database to manage core functionalities such as user registration, property listings, bookings, payments, and reviews. Below are the key entities and their relationships:
+
+### 👤 Users
+Represents all users of the platform, including guests and hosts.
+
+**Key Fields**:
+- `id` (Primary Key)
+- `name`
+- `email` (Unique)
+- `password_hash`
+- `is_host` (Boolean to differentiate hosts from regular users)
+
+**Relationships**:
+- A user can list **multiple properties**.
+- A user can make **multiple bookings**.
+- A user can leave **multiple reviews**.
+
+---
+
+### 🏠 Properties
+Represents properties listed by hosts.
+
+**Key Fields**:
+- `id` (Primary Key)
+- `title`
+- `description`
+- `location`
+- `price_per_night`
+- `host_id` (Foreign Key → Users)
+
+**Relationships**:
+- A property **belongs to one host** (user).
+- A property can have **multiple bookings**.
+- A property can receive **multiple reviews**.
+
+---
+
+### 📅 Bookings
+Represents reservation data for properties.
+
+**Key Fields**:
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `start_date`
+- `end_date`
+- `status` (e.g., pending, confirmed, cancelled)
+
+**Relationships**:
+- A booking **belongs to one user** (guest).
+- A booking **belongs to one property**.
+
+---
+
+### ⭐ Reviews
+Represents feedback left by users for properties.
+
+**Key Fields**:
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `rating` (e.g., 1 to 5)
+- `comment`
+
+**Relationships**:
+- A review **belongs to one user**.
+- A review **belongs to one property**.
+
+---
+
+### 💳 Payments
+Represents payment transactions related to bookings.
+
+**Key Fields**:
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Bookings)
+- `amount`
+- `payment_method` (e.g., credit card, PayPal)
+- `payment_status` (e.g., paid, failed, refunded)
+
+**Relationships**:
+- A payment **is associated with one booking**.
+
+---
+
+### 🔗 Entity Relationships Overview
+- One **User** ↔️ Many **Properties**  
+- One **User** ↔️ Many **Bookings**  
+- One **User** ↔️ Many **Reviews**  
+- One **Property** ↔️ Many **Bookings**  
+- One **Property** ↔️ Many **Reviews**  
+- One **Booking** ↔️ One **Payment**
 

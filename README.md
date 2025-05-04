@@ -99,3 +99,39 @@ Designs the visual interface and user experience to ensure usability, accessibil
 - Create wireframes, mockups, and user flows.
 - Collaborate with frontend/back-end developers to align functionality with design.
 - Conduct usability testing and refine interfaces.
+
+
+## 🧰 Technology Stack
+
+This project utilizes a modern full-stack architecture to ensure scalability, performance, and maintainability. Below are the core technologies and their roles in the Airbnb Clone Project:
+
+### ⚙️ Backend
+
+- **Django**: A high-level Python web framework used to build the backend of the application. It simplifies rapid development, handles server-side logic, and supports RESTful or GraphQL APIs.
+
+- **GraphQL**: A query language for APIs used instead of traditional REST. It allows the frontend to request only the data it needs, improving performance and flexibility in data exchange.
+
+### 🗃️ Database
+
+- **MySQL**: A powerful, open-source relational database used to store and manage structured data such as users, bookings, listings, reviews, and payments.
+
+### 🔐 Security & Authentication
+
+- **JWT (JSON Web Tokens)**: Used to securely authenticate users and manage session tokens. It enables stateless, scalable authentication.
+
+- **HTTPS**: Ensures encrypted communication between the client and server, protecting sensitive user data during transmission.
+
+### 🧪 DevOps & CI/CD
+
+- **GitHub**: Used for version control and team collaboration. It allows developers to manage code changes, pull requests, and track issues efficiently.
+
+- **GitHub Actions**: A CI/CD tool that automates testing, linting, and deployment pipelines to ensure continuous integration and delivery.
+
+- **Docker**: Used to containerize the application, ensuring consistency across different environments and simplifying deployment.
+
+- **Cloud Hosting (e.g., AWS, Heroku)**: Provides scalable infrastructure for deploying the application to staging and production environments.
+
+### 🖥️ Frontend (Optional/Extendable)
+
+- **React** *(suggested)*: While not covered in the initial scope, React can be used to build the frontend interface that interacts with the GraphQL API.
+
